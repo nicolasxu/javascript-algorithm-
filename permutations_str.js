@@ -7,6 +7,7 @@ function permutations(str){
   for(var i = 0; i < letters.length; i++) {
     letters[i];
     var result = permutations(str.substring(0, i) + str.substring(i + 1) );
+    console.log(result);
     for (var ii = 0; ii < result.length; ii++) {
       result[ii] = letters[i] +result[ii];
     }
@@ -17,5 +18,5 @@ function permutations(str){
 }
 
 
-console.log(permutations("abcd"));
+console.log(permutations("abcefg"));
 // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
