@@ -17,53 +17,34 @@ function printImg(img){
 printImg(img);
 
 
-// 0 1 2 3  => i
-// 1 2 3 4
-// 2 3 4 5
-// 3 4 5 6
+function rotate90(img){
+	// rotate layer by layer
+	// number of layer(nn array): Math.floor(img.length/2)
+	// layer index from 0 to number of layers
+	
 
+	for(var layer = 0; layer < Math.floor(img.length/2); layer++) {
+		// layer => img index
+		
+		// loop for n times, for each edge, since it is N x N array
+		for(var edge = 0; edge < 4; edge++) {
 
-// 3 4 5 6
-// 2 3 4 5
-// 1 2 3 4  
-// 0 1 2 3
+		  // length - layer*2
+			// 1. top to temp
+			// 00, 01, 02, 03
+			// 01 				 13
+			// 02 				 23
+			//  				   33
+			// 2. left to top
+			// 3. bottom to left
+			// 4. right to bottom
+			// 5. temp to right
 
-// var a = Math.pow(2, 32) - 1;
-// // assumption rotate left 90 degrees
-// img[i][0]
-
-function rotateImg(img) {
-	for (var i = 0; i < img.length; i++) {
-		for(var j = 0; j < Math.floor(img[i].length/2); j++) {
-			var temp = img[j][i];
-			img[j][i] = img[i][j];
-			img[i][j] = temp;
 		}
 	}
 }
 
-rotateImg(img);
-
-console.log('----------------');
-printImg(img);
-
-var source = "https://en.wikipedia.org/wiki/In-place_matrix_transposition";
-var source2 = "http://stackoverflow.com/questions/2968397/algorithm-to-rotate-an-image-90-degrees-in-place-no-extra-memory";
 
 
-
-/*
-1, 2
-3, 4
-5, 6
-
-T=>
-1, 3, 5
-2, 4, 6
-
-2, 4, 6
-1, 3, 5
-
- */
 
 
