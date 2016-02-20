@@ -62,7 +62,6 @@ Node.prototype.removeDuplicate = function(){
 	}
 	return counter;
 }
-
 Node.prototype.removeDuplicateNoBuffer = function (){
 	var pointerNode = this;
 	if(typeof pointerNode!== 'object') {
