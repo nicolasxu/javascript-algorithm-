@@ -116,6 +116,7 @@ function Stack2() {
 		}
 		return newNode.value;
 	}
+	
 	function min() {
 		return mins[mins.length -1];
 	}
