@@ -5,10 +5,13 @@
  */
 
 function MyQue() {
-	var s1 = []; // 1, 2, 3, 4, 5, 6
-	var s2 = []; // 
+	var s1 = []; // Using Javascript Array for stack
+	var s2 = []; 
 
 	function enQue(value) {
+		while(s2.length > 0) {
+			s1.push(s2.pop());
+		}
 		s1.push(value);
 	}
 
@@ -33,5 +36,7 @@ myQ.enQue(2);
 myQ.enQue(3);
 
 console.log(myQ.deQue());
+console.log(myQ.deQue());
+myQ.enQue(4);
 console.log(myQ.deQue());
 console.log(myQ.deQue());
