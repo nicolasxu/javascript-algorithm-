@@ -34,6 +34,7 @@ Elements of input arrays can be modified.
 
 // to successfully complete this, you need to list
 // all other possibilities that is not in the example. 
+// 
 function solution(A) {
 	// missing min, > 0, value
 	var length = A.length;
