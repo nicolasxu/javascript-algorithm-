@@ -17,6 +17,7 @@ function Permu(str) {
 		}
 		return result;
 	}
+	
 	function permutations(str) {
 		if(str.length === 1) {
 			return [str];
