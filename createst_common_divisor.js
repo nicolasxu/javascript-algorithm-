@@ -26,7 +26,7 @@ function greatestCommonDivisor2(a, b){
    if(b == 0)
      return a;
    else 
-     return greatestCommonDivisor(b, a%b);
+     return greatestCommonDivisor(b, a % b);
 }
 
-console.log(greatestCommonDivisor2(20, 30));
+console.log(greatestCommonDivisor2(20, 15));

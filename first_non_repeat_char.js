@@ -22,7 +22,8 @@ function firstNonRepeatChar(str) {
 			return letter;
 		}
 	}
-	return '';
+	return charOrder[1];
+	// return '';
 }
 
 

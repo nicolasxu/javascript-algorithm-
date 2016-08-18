@@ -36,10 +36,6 @@ expected worst-case space complexity is O(1).
 
 */
 
-
-
-
-
 function solution(X, Y, D) {
 	var distance = Y - X;
 	var steps = Math.ceil(distance / D);
@@ -55,6 +51,10 @@ var result = solution(x, y, d);
 
 
 console.log("result is: " + result);
+
+
+
+
 
 
 

@@ -45,14 +45,58 @@ function findMin(arr, from, to) {
   }
 }
 
-console.log(findMin(input));
+// console.log(findMin(input));
+
+
+function findMin2(arr) {
+
+	if(!Array.isArray(arr)) {
+		return void 0;
+	}
+	var length = arr.length;
+	if(length === 0) {
+		return void 0;
+	}
+	if(length === 1) {
+		return arr[0];
+	}
+
+	var currIndex; 
+	var prevIndex;
+	var nextIndex;
+	function findPrevIndex(i) {
+		var prev = i - 1;
+		if (prev < 0) {
+			return length + prev;
+		}
+		return prev;
+	}
+	function findNextIndex(i) {
+		var next = i + 1;
+		if(next === length) {
+			return next - length;
+		}
+		return next;
+	}
+
+	for(var i = 0; i < length; i++) {
+		prevIndex = findPrevIndex(i);
+		nextIndex = findNextIndex(i);
+		currIndex = i;
+		if(arr[prevIndex]> arr[currIndex] && arr[currIndex] < arr[nextIndex]) {
+			return arr[currIndex];
+		}
+	}
+}
+
+console.log(findMin2([4,1,2,3]));
 
 /*
 Explanation:
 
 
 However, binary search is very applicable. You know that the array is sorted, but rotated.
-So, it must proceed in an increasing order, then reset, and increase again.The minimum
+So, it must proceed in an increasing order, then reset, and increase again. The minimum
 element is the "reset" point.
 If you compare the middle and last element (6 and 2), you will know the reset point
 must be between those values, since MID > RIGHT. This wouldn't be possible unless
